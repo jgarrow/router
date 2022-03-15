@@ -21,7 +21,7 @@ Probably have a section that talks about the various ways to configure the Route
 You run Apollo Router with the following command (assuming you're in the same directory as the `router` executable):
 
 ```bash
-./router --config configuration.yaml --supergraph supergraph-schema.graphql
+./router --config config.router.yaml --supergraph supergraph-schema.graphql
 ```
 
 Options are described below.
@@ -109,7 +109,7 @@ One you have generated the schema configure your text editor. Here are some inst
 
 Apollo Router takes an optional YAML configuration file as input via the `--config` option. All supported configuration options are shown below:
 
-```yaml title="configuration.yaml"
+```yaml title="config.router.yaml"
 #
 # The Apollo Router doesn't require a configuration file to run. This
 # example is a verbose representation of possible configuration. It's
@@ -263,7 +263,7 @@ plugins:
 
 You can avoid repeating sections of configuration multiple times in your configuration file using standard YAML anchors and aliasing techniques:
 
-```yaml {5,9} title="configuration.yaml"
+```yaml {5,9} title="config.router.yaml"
 plugins:
   apollo.headers:
     subgraphs:
@@ -287,7 +287,7 @@ If the router receives an incoming request that already contains a `TraceParent`
 
 ### Using Jaeger
 
-```yaml title="configuration.yaml"
+```yaml title="config.router.yaml"
 server:
   listen: 127.0.0.1:4000
 plugins:
@@ -343,7 +343,7 @@ plugins:
 
 ### Using OTLP
 
-```yaml title="configuration.yaml"
+```yaml title="config.router.yaml"
 server:
   listen: 127.0.0.1:4000
 plugins:
