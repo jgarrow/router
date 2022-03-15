@@ -24,7 +24,7 @@ otlp-grpc = [
 otlp-http = ["opentelemetry-otlp/http-proto"]
 
 [dependencies]
-anyhow = "1.0.55"
+anyhow = "1.0.56"
 apollo-parser = { git = "https://github.com/apollographql/apollo-rs.git", rev = "e707e0f78f41ace1c3ecfe69bc10f4144ffbf7ac" }
 apollo-router-core = { path = "../apollo-router-core" }
 apollo-uplink = { path = "../uplink" }
@@ -40,7 +40,7 @@ hotwatch = "0.4.6"
 http = "0.2.6"
 hyper = { version = "0.14.17", features = ["server"] }
 itertools = "0.10.3"
-once_cell = "1.9.0"
+once_cell = "1.10.0"
 opentelemetry = { version = "0.17.0", features = ["rt-tokio", "serialize"] }
 opentelemetry-jaeger = { version = "0.16.0", features = [
     "collector_client",
@@ -51,7 +51,7 @@ opentelemetry-otlp = { version = "0.10.0", default-features = false, features = 
     "serialize",
 ], optional = true }
 prost-types = "0.9.0"
-regex = "1.5.4"
+regex = "1.5.5"
 reqwest = { version = "0.11.10", features = ["json", "stream"] }
 schemars = { version = "0.8.8", features = ["url"] }
 serde = { version = "1.0.136", features = ["derive", "rc"] }
@@ -82,7 +82,7 @@ rhai = { version = "1.5.0", features = ["sync", "serde", "internals"] }
 libc = "0.2.120"
 
 [dev-dependencies]
-insta = "1.12.0"
+insta = "1.13.0"
 maplit = "1.0.2"
 mockall = "0.11.0"
 reqwest = { version = "0.11.10", features = ["json", "stream"] }
